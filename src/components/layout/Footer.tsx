@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
     return (
@@ -9,7 +10,15 @@ export default function Footer() {
                 <div className="w-full flex flex-col md:flex-row justify-between items-center md:items-start gap-12 mb-16">
                     {/* Logo */}
                     <div>
-                        <h2 className="text-2xl font-bold tracking-[0.2em] uppercase">Sensuru</h2>
+                        <div className="w-[160px] mb-2">
+                            <Image
+                                src="/images/logo.png"
+                                alt="Sensuru"
+                                width={300}
+                                height={80}
+                                className="w-full h-auto object-contain brightness-0 invert opacity-80"
+                            />
+                        </div>
                         <p className="text-[10px] text-gray-400 mt-2 tracking-widest">Select your best life.</p>
                     </div>
 

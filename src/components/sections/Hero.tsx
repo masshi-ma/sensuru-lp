@@ -41,7 +41,7 @@ export default function Hero() {
                 {/* Container for centering, but text aligns somewhat left as per design */}
                 <div className="relative w-full max-w-7xl mx-auto px-6 h-full flex flex-col justify-center">
                     {/* Vertical Text */}
-                    <div className="absolute left-[10%] md:left-[20%] top-1/2 -translate-y-1/2 z-10">
+                    <div className="absolute left-[10%] md:left-[20%] top-1/2 -translate-y-1/2 md:-translate-x-[200px] z-10">
                         <Image
                             src="/images/hero_text.png"
                             alt="Sensuru Copy"

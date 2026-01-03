@@ -4,10 +4,10 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 const steps = [
-    { id: 1, title: "Consulting", desc: "ヒアリング・現状分析", num: "01" },
-    { id: 2, title: "Planning", desc: "戦略策定・プランニング", num: "02" },
-    { id: 3, title: "Design", desc: "デザイン・制作", num: "03" },
-    { id: 4, title: "Development", desc: "実装・システム構築", num: "04" },
+    { id: 1, title: "Consulting", desc: "ヒアリング・現状分析", num: "01", image: "/images/about_step2.png" }, // Balloon
+    { id: 2, title: "Planning", desc: "戦略策定・プランニング", num: "02", image: "/images/about_step1.png" }, // Blueprint
+    { id: 3, title: "Design", desc: "デザイン・制作", num: "03", image: "/images/about_step3.png" }, // Target
+    { id: 4, title: "Development", desc: "実装・システム構築", num: "04", image: "/images/about_step1.png" }, // Reusing Blueprint as placeholder/similar
 ];
 
 export default function About() {
@@ -40,13 +40,24 @@ export default function About() {
                     {/* Slider Container */}
                     <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-8 no-scrollbar">
                         {steps.map((step) => (
-                            <div key={step.id} className="snap-start shrink-0 w-[280px] md:w-[300px] bg-white p-8 shadow-sm flex flex-col justify-between aspect-[4/3]">
-                                <div>
+                            <div key={step.id} className="snap-start shrink-0 w-[280px] md:w-[300px] bg-white p-6 shadow-sm flex flex-col justify-between aspect-[3/4] md:aspect-[4/3] relative overflow-hidden group">
+                                <div className="z-10">
                                     <span className="text-4xl font-light text-gray-200">{step.num}</span>
-                                    <h3 className="text-xl font-serif text-gray-800 mt-4">{step.title}</h3>
+                                    <h3 className="text-xl font-serif text-gray-800 mt-2">{step.title}</h3>
                                 </div>
-                                <div>
-                                    <div className="w-8 h-[1px] bg-gray-300 mb-4"></div>
+
+                                {/* Image Area */}
+                                <div className="relative w-full h-[120px] my-4">
+                                    <Image
+                                        src={step.image}
+                                        alt={step.title}
+                                        fill
+                                        className="object-contain"
+                                    />
+                                </div>
+
+                                <div className="z-10">
+                                    <div className="w-8 h-[1px] bg-gray-300 mb-3"></div>
                                     <p className="text-sm text-gray-500">{step.desc}</p>
                                 </div>
                             </div>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 const newsItems = [
     { id: 1, date: "2024.11.20", category: "News", title: "年末年始の営業について", image: "/images/work_tube.jpg" },
@@ -72,9 +73,12 @@ export default function News() {
                         ))}
                     </div>
 
-                    <div className="mt-12 text-right md:text-center">
-                        <button className="px-10 py-3 rounded-full border border-gray-300 text-gray-600 text-sm tracking-widest hover:bg-gray-50 transition-colors">
-                            View List
+                    <div className="mt-12 flex justify-end md:justify-center">
+                        <button className="group relative flex items-center justify-center h-12 w-12 rounded-full border border-gray-400 bg-white transition-all duration-500 ease-out hover:w-[220px] hover:border-[#66FF99] hover:bg-[#66FF99] overflow-hidden">
+                            <span className="absolute opacity-0 group-hover:opacity-100 group-hover:relative group-hover:mr-2 text-gray-700 font-bold tracking-widest text-sm whitespace-nowrap transition-all duration-500 delay-100 transform translate-x-4 group-hover:translate-x-0">
+                                お知らせ一覧
+                            </span>
+                            <ArrowRight className="text-gray-500 transition-colors duration-300 group-hover:text-gray-700" size={20} />
                         </button>
                     </div>
                 </div>

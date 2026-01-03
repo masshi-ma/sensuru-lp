@@ -30,9 +30,14 @@ export default function About() {
                         <br />
                     </p>
 
-                    <button className="flex items-center gap-2 text-sm tracking-widest text-gray-800 border-b border-gray-800 pb-1 hover:opacity-70 transition-opacity">
-                        VIEW MORE <ArrowRight size={16} />
-                    </button>
+                    <div className="flex justify-start">
+                        <button className="group relative flex items-center justify-center h-12 w-12 rounded-full border border-gray-400 bg-white transition-all duration-500 ease-out hover:w-[220px] hover:border-[#66FF99] hover:bg-[#66FF99] overflow-hidden">
+                            <span className="absolute opacity-0 group-hover:opacity-100 group-hover:relative group-hover:mr-2 text-gray-700 font-bold tracking-widest text-sm whitespace-nowrap transition-all duration-500 delay-100 transform translate-x-4 group-hover:translate-x-0">
+                                私たちについて
+                            </span>
+                            <ArrowRight className="text-gray-500 transition-colors duration-300 group-hover:text-gray-700" size={20} />
+                        </button>
+                    </div>
                 </div>
 
                 {/* Right: Slider (Scroll Snap) */}

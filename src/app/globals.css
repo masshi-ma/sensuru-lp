@@ -2,16 +2,20 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #333333; /* Dark gray for text */
-  --accent: #4ade80; /* Vivid green (Tailwind green-400 approx) */
+  --foreground: #333333;
+  /* Dark gray for text */
+  --accent: #4ade80;
+  /* Vivid green (Tailwind green-400 approx) */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
+  /* Custom font variables mapping to Next.js font loaders */
   --font-sans: var(--font-noto-sans-jp), sans-serif;
-  --font-serif: var(--font-noto-serif-jp), serif;
+  --font-serif: var(--font-syne), var(--font-noto-sans-jp), sans-serif;
+  /* Using Syne as primary "serif" (display) font */
 }
 
 body {
@@ -29,6 +33,7 @@ body {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;

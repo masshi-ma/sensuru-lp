@@ -1,22 +1,21 @@
 import type { Metadata } from "next";
-import { Noto_Serif_JP, Noto_Sans_JP } from "next/font/google"; // Import Japanese fonts
+import { Syne, Noto_Sans_JP } from "next/font/google"; // Import fonts
 import "./globals.css";
 
-const notoSerifJP = Noto_Serif_JP({
-  variable: "--font-noto-serif-jp",
+const syne = Syne({
+  variable: "--font-syne",
   subsets: ["latin"],
-  weight: ["400", "700"], // Regular and Bold
+  weight: ["400", "500", "600", "700", "800"], // Explicit weights often help
 });
 
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
   subsets: ["latin"],
-  weight: ["400", "500", "700"], // Regular, Medium, Bold
 });
 
 export const metadata: Metadata = {
-  title: "SENSURU - Quality Japanese Products",
-  description: "Sensuru landing page reproduction",
+  title: "SENSURU | Select your best.",
+  description: "自然の恵みを最大限に生かした上質な暮らしを提案します。",
 };
 
 export default function RootLayout({
@@ -27,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body
-        className={`${notoSerifJP.variable} ${notoSansJP.variable} antialiased`}
+        className={`${syne.variable} ${notoSansJP.variable} antialiased`}
       >
         {children}
       </body>

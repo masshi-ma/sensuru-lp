@@ -40,7 +40,7 @@ export default function Hero() {
                             alt="Sensuru Copy"
                             width={300}
                             height={600}
-                            className="w-[120px] md:w-[200px] h-auto object-contain select-none"
+                            className="w-[240px] md:w-[400px] h-auto object-contain select-none"
                             priority
                         />
                     </div>

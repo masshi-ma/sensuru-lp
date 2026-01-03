@@ -40,14 +40,14 @@ export default function About() {
                     {/* Slider Container */}
                     <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-8 no-scrollbar">
                         {steps.map((step) => (
-                            <div key={step.id} className="snap-start shrink-0 w-[280px] md:w-[300px] bg-white p-6 shadow-sm flex flex-col justify-between aspect-[3/4] md:aspect-[4/3] relative overflow-hidden group">
+                            <div key={step.id} className="snap-start shrink-0 w-[280px] md:w-[300px] bg-white p-6 shadow-sm flex flex-col justify-between min-h-[450px] relative overflow-hidden group">
                                 <div className="z-10">
                                     <span className="text-4xl font-light text-gray-200">{step.num}</span>
                                     <h3 className="text-xl font-serif text-gray-800 mt-2">{step.title}</h3>
                                 </div>
 
-                                {/* Image Area */}
-                                <div className="relative w-full h-[120px] my-4">
+                                {/* Image Area - Increased size by 200% (approx) */}
+                                <div className="relative w-full h-[240px] my-4">
                                     <Image
                                         src={step.image}
                                         alt={step.title}

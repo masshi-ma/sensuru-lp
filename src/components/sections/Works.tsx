@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 const worksData = [
     { id: 1, title: "Hokkaido Bread", category: "Food", image: "/images/work_bread.jpg", size: "large" },
@@ -39,9 +40,12 @@ export default function Works() {
                 </div>
 
                 {/* More Button */}
-                <div className="mt-16 text-center">
-                    <button className="px-10 py-3 rounded-full border border-gray-300 text-gray-600 text-sm tracking-widest hover:bg-gray-50 transition-colors">
-                        View More
+                <div className="mt-16 flex justify-center">
+                    <button className="group relative flex items-center justify-center h-12 w-12 rounded-full border border-gray-400 bg-white transition-all duration-500 ease-out hover:w-[220px] hover:border-[#66FF99] hover:bg-[#66FF99] overflow-hidden">
+                        <span className="absolute opacity-0 group-hover:opacity-100 group-hover:relative group-hover:mr-2 text-gray-700 font-bold tracking-widest text-sm whitespace-nowrap transition-all duration-500 delay-100 transform translate-x-4 group-hover:translate-x-0">
+                            制作実績一覧
+                        </span>
+                        <ArrowRight className="text-gray-500 transition-colors duration-300 group-hover:text-gray-700" size={20} />
                     </button>
                 </div>
             </div>

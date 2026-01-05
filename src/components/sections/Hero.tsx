@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Menu } from "lucide-react";
+import Header from "@/components/layout/Header";
 
 export default function Hero() {
     return (
@@ -19,22 +20,7 @@ export default function Hero() {
             </div>
 
             {/* Header Elements (Overlay) */}
-            <header className="absolute top-0 left-0 w-full p-6 md:p-10 flex justify-between items-start z-20">
-                <h1>
-                    <Image
-                        src="/images/logo.png"
-                        alt="Sensuru"
-                        width={200}
-                        height={60}
-                        className="w-[120px] md:w-[160px] h-auto object-contain"
-                        priority
-                    />
-                </h1>
-                {/* SP Only Hamburger */}
-                <button className="md:hidden text-gray-700">
-                    <Menu size={28} strokeWidth={1.5} />
-                </button>
-            </header>
+            <Header />
 
             {/* Main Copy */}
             <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
